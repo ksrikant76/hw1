@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
   printList(odds1);
   std::cout << "Evens: ";
   printList(evens1);
-  std::cout << "In:    ";
+  std::cout << "In: ";
   printList(in1);
 
   //Test 2: odds and evens
@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
   printList(odds2);
   std::cout << "Evens: ";
   printList(evens2);
-  std::cout << "In:    ";
+  std::cout << "In: ";
   printList(in2);
 
   //Test 3: only odds
@@ -69,6 +69,6 @@ int main(int argc, char* argv[])
   printList(odds3);
   std::cout << "Evens: ";
   printList(evens3);
-  std::cout << "In:    ";
+  std::cout << "In: ";
   printList(in3);
 }
