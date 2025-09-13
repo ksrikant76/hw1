@@ -34,9 +34,9 @@ int main(int argc, char* argv[])
   std::cout << "Odds: ";
   printList(odds1);
   std::cout << "Evens: ";
-  printList(evens1); // empty
+  printList(evens1);
   std::cout << "In:    ";
-  printList(in1); // empty
+  printList(in1);
 
   //Test 2: odds and evens
   Node* six = new Node(6, NULL);
@@ -53,11 +53,11 @@ int main(int argc, char* argv[])
   std::cout << "Odds: ";
   printList(odds2);
   std::cout << "Evens: ";
-  printList(evens2); // empty
+  printList(evens2);
   std::cout << "In:    ";
-  printList(in2); // empty
+  printList(in2);
 
-  //Test 3: Only odds
+  //Test 3: only odds
   one->next = three;
   three->next = five;
   five->next = NULL;
@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
   std::cout << "Odds: ";
   printList(odds3);
   std::cout << "Evens: ";
-  printList(evens3); // empty
+  printList(evens3);
   std::cout << "In:    ";
-  printList(in3); // empty
+  printList(in3);
 }
