@@ -10,8 +10,65 @@ g++ split.cpp test_split.cpp -o test_split
 */
 
 #include "split.h"
+#include <cstddef>
+#include <iostream>
+
+void printList(Node* head) {
+  if (head == NULL) {
+    std::cout << std::endl;
+    return;
+  }
+  else {
+    std::cout << head->value << " ";
+    printList(head->next);
+  }
+}
 
 int main(int argc, char* argv[])
 {
+  //Test 1: empty input
+  Node* in1 = NULL;
+  Node* odds1 = NULL;
+  Node* evens1 = NULL;
+  split(in1, odds1, evens1);
+  std::cout << "Odds: ";
+  printList(odds1);
+  std::cout << "Evens: ";
+  printList(evens1); // empty
+  std::cout << "In:    ";
+  printList(in1); // empty
 
+  //Test 2: odds and evens
+  Node* six = new Node(6, NULL);
+  Node* five = new Node(5, six);
+  Node* four = new Node(4, five);
+  Node* three = new Node(3, four);
+  Node* two = new Node(2, three);
+  Node* one = new Node(1, two);
+
+  Node* in2 = one;
+  Node* odds2 = NULL;
+  Node* evens2 = NULL;
+  split(in2, odds2, evens2);
+  std::cout << "Odds: ";
+  printList(odds2);
+  std::cout << "Evens: ";
+  printList(evens2); // empty
+  std::cout << "In:    ";
+  printList(in2); // empty
+
+  //Test 3: Only odds
+  one->next = three;
+  three->next = five;
+  five->next = NULL;
+  Node* in3 = one;
+  Node* odds3 = NULL;
+  Node* evens3 = NULL;
+  split(in3, odds3, evens3);
+  std::cout << "Odds: ";
+  printList(odds3);
+  std::cout << "Evens: ";
+  printList(evens3); // empty
+  std::cout << "In:    ";
+  printList(in3); // empty
 }
